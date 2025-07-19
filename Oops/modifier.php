@@ -1,7 +1,12 @@
 <?php
 class Modifier
 {
-    protected $name;
+    protected $name;  // public , protected, private
+    public function __construct($name = 'None')
+    {
+        $this->name = $name;
+
+    }
     public function info()
     {
         echo $this->name;
@@ -18,11 +23,11 @@ class protect extends Modifier
 
 // $obj = new Modifier();
 // $obj->name = 'Anurag';
-$obj->info();
+// $obj->info();
 
 echo '<br>';
-$obj1 = new protect();
-$obj1->name = 'sahil';
+$obj1 = new protect('Anurag');
+// $obj1->name = 'sahil';
 $obj1->getname();
 
 ?>
