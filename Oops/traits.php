@@ -1,19 +1,24 @@
 <?php
-trait A {
-    public function info() {
+trait A
+{
+    public function info()
+    {
         echo "This is an info method in trait A";
     }
 }
 
-class B {
+class B
+{
     use A;
 }
-class C extends B {
-    public function show() {
-        echo "Hello from class C";
-    }
+class C
+{
+    use A;
 }
 $c = new C();
-$c->show();
 $c->info();
+echo "<br>";
+$b = new B();
+$b->info();
+
 ?>
